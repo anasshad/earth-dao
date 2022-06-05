@@ -1,6 +1,10 @@
 import { useAddress, useMetamask, useEditionDrop, useToken, useVote, useNetwork } from '@thirdweb-dev/react';
 import { useEffect, useState, useMemo } from 'react'
 import {ChainId} from '@thirdweb-dev/sdk';
+import Earth from './earth.gif';
+
+//IMPORT COMPONENTS
+import Mint from './components/Mint';
 
 const App = () => {
   const address = useAddress();
@@ -160,6 +164,7 @@ const network = useNetwork();
   if (!address) {
     return (
       <div className="landing">
+        <img src={Earth} alt="earth-gif"  />
         <h1>Welcome to EarthDAO</h1>
         <button onClick={connectWithMetamask} className="btn-hero">
           Connect Wallet
@@ -173,8 +178,11 @@ const network = useNetwork();
   if (hasClaimedNFT) {
     return (
       <div className="member-page" >
-        <div><h1>DAO Member Page</h1>
-          <h3>Welcome to EarthDAO</h3>
+        <img src={Earth} alt="earth-gif"  />
+        <h1>Earth DAO</h1>
+        <h3>Welcome tso EarthDAO</h3>
+        <div>
+        <div>
           <h2>Member List</h2>
           <table className="card" >
             <thead>
@@ -320,18 +328,14 @@ const network = useNetwork();
             )}
           </form>
         </div>
+        </div>
+        
       </div>
     )
   }
 
   return (
-    <div className="mint-nft">
-      <h1>Welcome to EarthDAO</h1>
-      <h2>Mint your EarthDAO NFT</h2>
-      <button disabled={isClaiming} onClick={mintNFT}>
-        {isClaiming ? "Minting..." : "Mint your NFT"}
-      </button>
-    </div>
+    <Mint isClaiming={isClaiming} mintNFT={mintNFT}/>
   );
 };
 

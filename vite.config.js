@@ -8,6 +8,9 @@ const defaultConfig = {
     hmr: {
       port: 443,
     }
+  },
+  build: {
+    chunkSizeWarningLimit: 1000000
   }
 };
 
