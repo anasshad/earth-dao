@@ -25,5 +25,5 @@ import {readFileSync} from 'fs'
   }
 
   
-})
+})()
 
