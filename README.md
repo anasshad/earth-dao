@@ -3,4 +3,4 @@
 
 ### **Welcome 👋**
 
-[url=https://ibb.co/gtV0W1j][img]https://i.ibb.co/CV2j9d1/Screenshot-2022-06-07-205605.png[/img][/url]
+![earthdao]([http://url/to/img.png](https://i.ibb.co/CV2j9d1/Screenshot-2022-06-07-205605.png))
